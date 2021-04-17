@@ -1,0 +1,47 @@
+
+<div class="card">
+
+    <div class="card-header bg-dark text-light">Level 1</div>
+    <div class="card-body">
+        <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
+        <ol>
+            <li>...all womens' leagues</li>
+            <li>...all leagues where sport is any type of hockey</li>
+            <li>...all leagues where sport is something OTHER THAN football</li>
+            <li>...all leagues that call themselves "conferences"</li>
+            <li>...all leagues in the Atlantic region</li>
+            <li>...all teams based in Dallas</li>
+            <li>...all teams named the Raptors</li>
+            <li>...all teams whose location includes "City"</li>
+            <li>...all teams whose names begin with "T"</li>
+            <li>...all teams, ordered alphabetically by location</li>
+            <li>...all teams, ordered by team name in reverse alphabetical order</li>
+            <li>...every player with last name "Cooper"</li>
+            <li>...every player with first name "Joshua"</li>
+            <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
+            <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+        </ol>
+    </div>
+    <div>
+        <ol>
+        <li>@foreach (var Womens in ViewBag.Womens){@Womens.Name <br>;}</li>
+        <li>@foreach (var Sport in ViewBag.SportLeagues){@Sport.Sport<br>;}</li>
+        <li>@foreach (var OtherSport in ViewBag.OtherSportLeagues){@OtherSport.Sport<br>;}</li>
+        <li>@foreach (var Conference in ViewBag.Conferences){@Conference.Name<br>;}</li>
+        <li>@foreach (var Atlantic in ViewBag.Atlantic){@Atlantic.Name<br>;}</li>
+        <li>@foreach (var Dallas in ViewBag.Dallas){@Dallas.TeamName<br>;}</li>
+        <li>@foreach (var Raptors in ViewBag.Raptors){@Raptors.Location<br>;}</li>
+        <li>@foreach (var City in ViewBag.City){@City.TeamName<br>;}</li>
+        <li>@foreach (var T in ViewBag.T){@T.TeamName <br>;}</li>
+        <li>@foreach (var Alpha in ViewBag.Alpha){ @Alpha.Location@Alpha.TeamName <br>;}</li>
+        <li>@foreach (var Reverse in ViewBag.Reverse){@Reverse.Location @Reverse.TeamName <br>;}</li>
+        <li>@foreach (var Cooper in ViewBag.Cooper){@Cooper.LastName @Cooper.FirstName<br>;}</li>
+        <li>@foreach (var Joshua in ViewBag.Joshua){@Joshua.FirstName @Joshua.LastName<br>;}</li>
+        <li>@foreach (var CooperNotJoshua in ViewBag.CooperNotJoshua){@CooperNotJoshua.FirstName @CooperNotJoshua.LastName<br>;}</li>
+        <li>@foreach (var AlexOrWyatt in ViewBag.AlexOrWyatt){@AlexOrWyatt.FirstName @AlexOrWyatt.LastName<br>;}</li>
+
+
+        </ol>
+        <p>Hello</p>
+    </div>
+</div>
